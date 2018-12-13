@@ -1,7 +1,6 @@
 <h1>Post Model</h1>
-{{ if posts }}
+{% if posts %}
 <table>
-
     {% for post in posts %}
     <tr>
         <td>{{ post.title}}</td>
@@ -10,5 +9,5 @@
     {% endfor %}
 </table>
 {% else %}
-<p>No Posts have been made yet!</p>
+<p>No Posts have been made yet! <a href="/onemodel/add/">Click Here to add one!</a> </p>
 {% endif %}
