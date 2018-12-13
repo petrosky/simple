@@ -1,0 +1,14 @@
+<h1>Post Model</h1>
+{{ if posts }}
+<table>
+
+    {% for post in posts %}
+    <tr>
+        <td>{{ post.title}}</td>
+        <td>{{ post.body}}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% else %}
+<p>No Posts have been made yet!</p>
+{% endif %}
