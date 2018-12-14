@@ -6,6 +6,6 @@ app_name = 'onemodel'
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('add', views.add, name='add'),
+    path('add/', views.add, name='add'),
     path('admin/', admin.site.urls),
 ]

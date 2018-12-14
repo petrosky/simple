@@ -1,13 +1,16 @@
+<textarea onclick="this.focus();this.select()" style="width: 100%;"> {% filter force_escape %} {% debug %} {% endfilter %}</textarea>
+
 <h1>Post Model</h1>
-{% if posts %}
+{% if tasks %}
 <table>
-    {% for post in posts %}
+    {% for task in tasks %}
     <tr>
-        <td>{{ post.title}}</td>
-        <td>{{ post.body}}</td>
+        <td>{{ task.title}}</td>
+        <td>{{ task.body}}</td>
     </tr>
     {% endfor %}
 </table>
+<a href="/onemodel/add/">Click Here to add one!</a>
 {% else %}
 <p>No Posts have been made yet! <a href="/onemodel/add/">Click Here to add one!</a> </p>
 {% endif %}
